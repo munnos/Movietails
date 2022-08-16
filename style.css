@@ -6,7 +6,7 @@
     color: white;
 }
 body {
-    background-image: url("cocktail.jpeg");
+    background-image: url("./assets/casablanca.jpg");
     min-height: 100vh;
     display: flex;
     flex-direction: column;
