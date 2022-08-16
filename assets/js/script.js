@@ -5,51 +5,54 @@ var glassType;
 
 /**!!!!!!!change the film genre here for cocktail code !!!!!!!***/
 
-let filmType = "comedy";  //used in the cocktail code
+//let filmType = "comedy";  //used in the cocktail code
 /***********************/
 
 
-if(filmType === "adventure") {
-    glassType = ["Highball glass", "white wine glass", "copper mug", "Hurricane glass"];
-} else if(filmType === "animation") {
-    glassType = ["parfait glass", "whiskey sour glass", "shot glass", "white wine glass"];
-} else if(filmType === "comedy") {  
-    glassType = ["beer pilsner", "beer mug", "highball glass", "shot glass", "irish coffee cup", "champagne flute"];
-} else if(filmType === "action") {
-  glassType = ["Highball glass", "white wine glass", "copper mug", "Hurricane glass", "shot glass", "beer Glass"];
-} else if(filmType === "crime") {
-  glassType = ["Whiskey Glass", "Whiskey sour glass", "Nick and Nora Glass", "Martini Glass"];
-} else if(filmType === "documentary") {
-  glassType = ["Pint glass","Wine Glass","Coffee mug"];
-}  else if(filmType === "drama") {
-  glassType = ["Old-fashioned glass","Hurricane glass","Beer pilsner","Pousse cafe glass"];
-}  else if(filmType === "history") {
-  glassType = ["Brandy snifter","Irish coffee cup","Champagne flute","Whiskey Glass","Margarita glass"];
-} else if(filmType === "fantasy") {
-  glassType = ["Cocktail glass","Pousse cafe glass","Beer Glass","Balloon Glass","Copper Mug"];
-} else if(filmType === "horror") {
-  glassType = ["Collins glass","Wine Glass","Mason jar","Pousse cafe glass","Whiskey Glass"];
-} else if(filmType === "music") {
-  glassType = ["Pitcher","Highball glass","Beer Glass","Shot glass"];
-} else if(filmType === "mystery") {
-  glassType = ["Pousse cafe glass","Nick and Nora Glass","Champagne flute", "Whiskey Glass", "Nick and Nora Glass", "shot glass"]; 
-} else if(filmType === "romance") {
-  glassType = ["Cocktail glass","White wine glass","Wine Glass","Parfait glass"];
-} else if(filmType === "scienceFiction") {
-  glassType = ["Pousse cafe glass","Shot glass","Pitcher","Beer mug","Pitcher","Copper Mug"];
-} else if(filmType === "tvMovie") {
-  glassType = ["Beer Glass","Highball glass","Wine Glass","Whiskey Glass","Old-fashioned glass"];
-} else if(filmType === "thriller") {
-  glassType = ["Shot glass","Pousse cafe glass","Margarita glass","Wine Glass"];
-} else if(filmType === "war") {
-  glassType = ["Whiskey Glass","Beer mug","Beer pilsner","Beer Glass","Old-fashioned glass"];
-} else if(filmType === "western") {
-  glassType = ["Old-fashioned glass","Whiskey Glass","Whiskey sour glass","Beer Glass","Martini Glass"];
-} else if(filmType === "family") {
-  glassType = "family"; 
-} else {
-  console.log("matching film genre not found ");
-  
+function getglassClass(filmType) {
+
+  if(filmType === "adventure") {
+      glassType = ["Highball glass", "white wine glass", "copper mug", "Hurricane glass"];
+  } else if(filmType === "animation") {
+      glassType = ["parfait glass", "whiskey sour glass", "shot glass", "white wine glass"];
+  } else if(filmType === "comedy") {  
+      glassType = ["beer pilsner", "beer mug", "highball glass", "shot glass", "irish coffee cup", "champagne flute"];
+  } else if(filmType === "action") {
+    glassType = ["Highball glass", "white wine glass", "copper mug", "Hurricane glass", "shot glass", "beer Glass"];
+  } else if(filmType === "crime") {
+    glassType = ["Whiskey Glass", "Whiskey sour glass", "Nick and Nora Glass", "Martini Glass"];
+  } else if(filmType === "documentary") {
+    glassType = ["Pint glass","Wine Glass","Coffee mug"];
+  }  else if(filmType === "drama") {
+    glassType = ["Old-fashioned glass","Hurricane glass","Beer pilsner","Pousse cafe glass"];
+  }  else if(filmType === "history") {
+    glassType = ["Brandy snifter","Irish coffee cup","Champagne flute","Whiskey Glass","Margarita glass"];
+  } else if(filmType === "fantasy") {
+    glassType = ["Cocktail glass","Pousse cafe glass","Beer Glass","Balloon Glass","Copper Mug"];
+  } else if(filmType === "horror") {
+    glassType = ["Collins glass","Wine Glass","Mason jar","Pousse cafe glass","Whiskey Glass"];
+  } else if(filmType === "music") {
+    glassType = ["Pitcher","Highball glass","Beer Glass","Shot glass"];
+  } else if(filmType === "mystery") {
+    glassType = ["Pousse cafe glass","Nick and Nora Glass","Champagne flute", "Whiskey Glass", "Nick and Nora Glass", "shot glass"]; 
+  } else if(filmType === "romance") {
+    glassType = ["Cocktail glass","White wine glass","Wine Glass","Parfait glass"];
+  } else if(filmType === "scienceFiction") {
+    glassType = ["Pousse cafe glass","Shot glass","Pitcher","Beer mug","Pitcher","Copper Mug"];
+  } else if(filmType === "tvMovie") {
+    glassType = ["Beer Glass","Highball glass","Wine Glass","Whiskey Glass","Old-fashioned glass"];
+  } else if(filmType === "thriller") {
+    glassType = ["Shot glass","Pousse cafe glass","Margarita glass","Wine Glass"];
+  } else if(filmType === "war") {
+    glassType = ["Whiskey Glass","Beer mug","Beer pilsner","Beer Glass","Old-fashioned glass"];
+  } else if(filmType === "western") {
+    glassType = ["Old-fashioned glass","Whiskey Glass","Whiskey sour glass","Beer Glass","Martini Glass"];
+  } else if(filmType === "family") {
+    glassType = "family"; 
+  } else {
+    console.log("matching film genre not found ");
+    
+  } 
 } 
 
 //var family;  //qurey string changed in getCocktailId for non alcoholic option
@@ -220,12 +223,19 @@ async function getCocktailDetails() {
   localStorage.setItem("cocktails", JSON.stringify( storedCocktailList));
   
   console.log(store);
+  cocktailObjects = [];
+  cocktailDetails = []
+  cocktailId = [];
+  randomId = []
+  store = []
+  
 }
     
 async  function displayCocktailDetails() {
   await getCocktailId();
   getRandomId();  
   getCocktailDetails();   
+
 }
 
 
@@ -261,132 +271,137 @@ var randomise17 = Math.random() * 100;
 var randomise18 = Math.random() * 100;
 
 
-
+var url;
 // storing API calls for genres in variables
+function getFilmApi(filmType) {
 
-var randomfilmApi =
-  "https://api.themoviedb.org/3/discover/movie?&page=" +
-  randomise +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var action =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=28&page=" +
-  randomise1 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var adventure =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=12&page=" +
-  randomise2 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var animation =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=16&page=" +
-  randomise3 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var comedy =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=35&page=" +
-  randomise4 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var crime =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=80page=" +
-  randomise5 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var documentary =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=27page=" +
-  randomise6 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var drama =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=18&page=" +
-  randomise7 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var family =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=10751&page=" +
-  randomise8 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var fantasy =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=14&page=" +
-  randomise9 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var history =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=36&page=" +
-  randomise10 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var horror =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=27&page=" +
-  randomise11 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var music =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=10402&page=" +
-  randomise12 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var mystery =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=9648&page=" +
-  randomise13 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var romance =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=10749&page=" +
-  randomise14 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var scienceFiction =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=878&page=" +
-  randomise15 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var thriller =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=53&page=" +
-  randomise16 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var war =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=10752&page=" +
-  randomise17 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
-var western =
-  "https://api.themoviedb.org/3/discover/movie?with_genres=37&page=" +
-  randomise18 +
-  "&api_key=" +
-  apiKey +
-  "&language=en-US";
+  if(filmType === "action") {
+
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=28&page=" + 
+    randomise1 +
+    "&api_key=" +
+    apiKey +
+    "&language=en-US";
+  } else if (filmType === "adventure") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=12&page=" +
+      randomise2 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "animation") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=16&page=" +
+      randomise3 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "comedy") {
+      url = "https://api.themoviedb.org/3/discover/movie?with_genres=35&page=" +
+      randomise4 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "crime") {
+      url = "https://api.themoviedb.org/3/discover/movie?with_genres=80page=" +
+      randomise5 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "documentary") {
+      url = "https://api.themoviedb.org/3/discover/movie?with_genres=27page=" +
+      randomise6 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "drama") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=18&page=" +
+      randomise7 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  }  else if (filmType === "family") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=10751&page=" +
+    randomise8 +
+    "&api_key=" +
+    apiKey +
+    "&language=en-US";
+  }  else if (filmType === "fantasy") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=14&page=" +
+      randomise9 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  }  else if (filmType === "history") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=36&page=" +
+      randomise10 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "horror") {
+  url = "https://api.themoviedb.org/3/discover/movie?with_genres=27&page=" +
+      randomise11 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "music") {
+
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=10402&page=" +
+      randomise12 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "mystery") {
+
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=9648&page=" +
+      randomise13 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "romance") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=10749&page=" +
+      randomise14 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "scienceFiction") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=878&page=" +
+      randomise15 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "thriller") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=53&page=" +
+      randomise16 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "war") {
+    url = "https://api.themoviedb.org/3/discover/movie?with_genres=10752&page=" +
+      randomise17 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else if (filmType === "western") {
+
+    url =  "https://api.themoviedb.org/3/discover/movie?with_genres=37&page=" +
+      randomise18 +
+      "&api_key=" +
+      apiKey +
+      "&language=en-US";
+  } else {
+
+    console.log("film match not found");
+  }
+    
+}
 
 // function storing 4 random films for varying genres
 
 //use a variable to select the genre 
-var filmGenre;
+//var filmGenre;
 /***********change film genre here for film code *************************/
-filmGenre = comedy;
+//filmGenre = comedy;
 /*************************************/
-console.log(filmGenre);
+//console.log(filmGenre);
 
 
 function storeFilms(filmData) {
@@ -415,9 +430,9 @@ function storeFilms(filmData) {
 
 }
 
-function callFilm() {
-
-fetch(filmGenre).then(function (response) {
+function callFilm(filmType) {
+getFilmApi(filmType);
+fetch(url).then(function (response) {
   if (response.ok) {
     response.json().then(function (data) {
       console.log(data);
@@ -451,7 +466,17 @@ fetch(filmGenre).then(function (response) {
 //This is the main function call to start api requests, processing of data and the storing of cocktail information to local storage 
 
 //TO DO: code for button event to go here and call functions below:
-displayCocktailDetails();
-callFilm();
+//displayCocktailDetails();
+//callFilm();
 
+$('#suggest').on('click', function(){
+  console.log("suggest button has been clicked");
+  var film = $('#filmgenre').val();
+  alert("You have selected the film - " + film);
+  var filmType = film;
+  console.log(filmType);
+  getglassClass(filmType);
+  displayCocktailDetails();
+  callFilm(filmType);
 
+});
