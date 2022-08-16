@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <p style="background-image: url('cocktail.jpeg');">
+    <!-- <p style="background-image: url('./assets/Casablanca.jpg');"> -->
     <div class="title">
       <h1>FilmTails- Film and Cocktail Generator</h1>
     </div>
@@ -23,14 +23,15 @@
     </div>
     <style id="backgroundimage">
         body {
-         background-image: url('images/butler.jpeg');
+         background-image: url("./assets/casablanca.jpg");
          background-repeat: no-repeat;
          background-attachment: fixed;
          background-size: cover;
         }
     </style>
-   <div class="ui grid'">
-    <div class="two-coloums"></div>
+   <div class="ui two column grid">
+    <div class="row">
+    <div class="column">
     <section class="container">
         <main id="mainbox" class="aboutthewebsite">
          <section>
@@ -59,18 +60,22 @@
         </div>
           <button class="ui button">Suggest</button>
          </main>
+        </div>
     
-    </section>
-    <section class="container">
-        <main id="mainbox" class="aboutthewebsite">
+        <div class="ui two column grid">
+            <div class="row">
+         <main id="mainbox" class="aboutthewebsite">
             <h3>
                 Choose a random film paired with a cocktail to match the film genre with cocktails 
             </h3>
             <button class="ui button">Random</button>
         </main>
+        </div>
         
     </section>
     </div>
+</div>
+</div>
 
 <footer class="footer">
         <h2></h2>
