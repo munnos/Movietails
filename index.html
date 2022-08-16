@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <p style="background-image: url('cocktail.jpeg');">
+    <!-- <p style="background-image: url('./assets/Casablanca.jpg');"> -->
     <div class="title">
       <h1>FilmTails- Film and Cocktail Generator</h1>
     </div>
@@ -23,14 +23,15 @@
     </div>
     <style id="backgroundimage">
         body {
-         background-image: url('images/butler.jpeg');
+         background-image: url("./assets/casablanca.jpg");
          background-repeat: no-repeat;
          background-attachment: fixed;
          background-size: cover;
         }
     </style>
-   <div class="ui grid'">
-    <div class="two-coloums"></div>
+   <div class="ui two column grid">
+    <div class="row">
+    <div class="column">
     <section class="container">
         <main id="mainbox" class="aboutthewebsite">
          <section>
@@ -46,31 +47,45 @@
             <div class="field">
               <select class="ui fluid dropdown" id ="filmgenre">
                 <option value="">Genre</option>
-            <option value="action">Action</option>
-            <option value="adventure">Adventure</option>
-            <option value="animation">Animation</option>
-            <option value="comedy">Comedy</option>
-            <option value="crime">Crime</option>
-            <option value="documentary">Documentary</option>
-            <option value="drama">Drama</option>
-            <option value="family">Family</option>
-            <option value="fantasy">Fantasy</option>
+            <option value="action">action</option>
+            <option value="adventure">adventure</option>
+            <option value="animation">animation</option>
+            <option value="comedy">comedy</option>
+            <option value="crime">crime</option>
+            <option value="documentary">documentary</option>
+            <option value="drama">drama</option>
+            <option value="family">family</option>
+            <option value="fantasy">fantasy</option>
+            <option value="history">history</option>
+            <option value="horror">horror</option>
+            <option value="music">music</option>
+            <option value="mystery">mystery</option>
+            <option value="romance">romance</option>
+            <option value="science fiction">science fiction</option>
+            <option value="thriller">thriller</option>
+            <option value="war">war</option>
+            <option value="western">western</option>
+
                 </select>
         </div>
           <button class="ui button" id="suggest">Suggest</button>
          </main>
+        </div>
     
-    </section>
-    <section class="container">
-        <main id="mainbox" class="aboutthewebsite">
+        <div class="ui two column grid">
+            <div class="row">
+         <main id="mainbox" class="aboutthewebsite">
             <h3>
                 Choose a random film paired with a cocktail to match the film genre with cocktails 
             </h3>
             <button class="ui button">Random</button>
         </main>
+        </div>
         
     </section>
     </div>
+</div>
+</div>
 
 <footer class="footer">
         <h2></h2>
