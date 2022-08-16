@@ -8,3 +8,45 @@
   margin-bottom: 20px;
   padding-top: 20px;
 }
+.title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+  text-align: center;
+  background-color: rgb(85, 71, 89);;
+  color: white;
+}
+body {
+  background-image: url("./assets/casablanca.jpg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  margin-top: auto;
+  color: white;
+}
+
+.topnav {
+  background-color: rgb(85, 71, 89);;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.aboutthewebsite {
+  background-color: lightgrey; 
+  position:relative;
+  width: 500px;
+  border: 15px solid rgb(85, 71, 89);
+  padding: 50px;
+  margin: 20px;
+}
