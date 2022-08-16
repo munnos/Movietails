@@ -3,15 +3,82 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 
 <body>
-    <div>
-        
+    <p style="background-image: url('cocktail.jpeg');">
+    <div class="title">
+      <h1>FilmTails- Film and Cocktail Generator</h1>
     </div>
+  
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#history">History</a>
+    </div>
+    <style id="backgroundimage">
+        body {
+         background-image: url('images/butler.jpeg');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+        }
+    </style>
+   <div class="ui grid'">
+    <div class="two-coloums"></div>
+    <section class="container">
+        <main id="mainbox" class="aboutthewebsite">
+         <section>
+            <h2></h2> 
+             <h3>
+                   Let us suggest a selection of films from your choice of movie genre and pair them with a cocktail
+             </h3>
+             <p>
+                    Select a film genre 
+             </p>
+         </section> 
+         <div class="two fields">
+            <div class="field">
+              <select class="ui fluid dropdown">
+                <option value="">Genre</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Animation">Animation</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime">Crime</option>
+            <option value="Documentary">Documentary</option>
+            <option value="Drama">Drama</option>
+            <option value="Family">Family</option>
+            <option value="Fantasy">Fantasy</option>
+                </select>
+        </div>
+          <button class="ui button">Suggest</button>
+         </main>
+    
+    </section>
+    <section class="container">
+        <main id="mainbox" class="aboutthewebsite">
+            <h3>
+                Choose a random film paired with a cocktail to match the film genre with cocktails 
+            </h3>
+            <button class="ui button">Random</button>
+        </main>
+        
+    </section>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+   
+    <footer class="footer">
+        <h2></h2>
+        <p>
+            &copy; copyright
+        </p>
+    </footer>
 </body>
 
 </html>
