@@ -198,7 +198,51 @@ fetch(random).then(function (response) {
   }
 })};
 
+
 //Button event code to go here
 
 randomCocktail(cocktailRandomApi);
 callFilm();
+
+var localRooster = JSON.parse(window.localStorage.getItem("randomCocktails"));
+var localFilm = JSON.parse(window.localStorage.getItem("randomFilms"));
+var movieURL = "https://image.tmdb.org/t/p/w500";
+
+  function generateInstructionList(location, cardList, glass) {
+    const glassType1 = document.querySelector(glass);
+    glassType1.innerText = "Glass type: " + location["glass-type"];
+    var clear = document.querySelector(cardList);
+    clear.innerText = "";
+  
+    for (let i = 0; i < location.ingredients.length; i++) {
+      const list1 = document.querySelector(cardList);
+      var iList = document.createElement("li");
+      iList.innerText =
+        location.ingredients[i] + "-(" + location.measures[i] + ")";
+      list1.append(iList);
+    }
+  }
+  function firstCard() {
+    document.querySelector("#instructions1").onclick = function () {
+      generateInstructionList(localRooster[0], "#list1", "#glassType1");
+      document.querySelector('#inst1').innerText = localRooster[0].instructions;
+    };
+    document.querySelector("#image1").src = localRooster[0].image;
+    document.querySelector("#name1").innerText = localRooster[0].name;
+  }
+
+function populateDiscription(locationF, disc) {
+  const dis = document.querySelector(disc);
+  dis.innerText = locationF.overview; 
+}
+
+function firstMCard() {
+  document.querySelector('#overview1').onclick = function () {
+    populateDiscription(localFilm[0], '#discription1');
+  };
+  document.querySelector("#poster1").src = movieURL+localFilm[0].poster;
+  document.querySelector("#title1").innerText = localFilm[0].title;
+}
+
+firstCard();
+firstMCard();
