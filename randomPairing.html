@@ -10,6 +10,7 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
     />
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <header>    
@@ -22,8 +23,12 @@
           <a href="#history">History</a>
         </div>
     </header>
-    <div class="ui card">
-      <div class="image">
+    <div class = "subtitle">
+      <h2>Random Film and Cocktail combo</h2>
+    </div>
+    <section class="ui grid">
+    <div class="ui card four wide column centered">
+      <div class="image ui column">
         <img id="image1" src="" />
       </div>
       <div class="content">
@@ -36,8 +41,8 @@
         </div>
       </div>
     </div>
-    <div class="ui card">
-      <div class="image">
+    <div class="ui card four wide column centered">
+      <div class="image ui column">
         <img id="poster1" src="" />
       </div>
       <div class="content">
@@ -49,6 +54,14 @@
         </div>
       </div>
     </div>
+  </section>
+  <footer id="footer">
+    <h2></h2>
+    <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p><style>
+    </style>
+       <img src="./assets/images/Movie database logo.svg" style="width:10%;" style="height:10%;">
+    </p>
+</footer>
     
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
