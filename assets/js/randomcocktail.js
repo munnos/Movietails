@@ -102,6 +102,33 @@
       
       /***************************************/
       //JOSEPH add your code to create the cocktail card here: 
+var localRooster = JSON.parse(window.localStorage.getItem("randomCocktail"));
+
+  function generateInstructionList(location, cardList, glass) {
+    const glassType1 = document.querySelector(glass);
+    glassType1.innerText = "Glass type: " + location["glass-type"];
+    var clear = document.querySelector(cardList);
+    clear.innerText = "";
+  
+    for (let i = 0; i < location.ingredients.length; i++) {
+      const list1 = document.querySelector(cardList);
+      var iList = document.createElement("li");
+      iList.innerText =
+        location.ingredients[i] + "-(" + location.measures[i] + ")";
+      list1.append(iList);
+    }
+  }
+  function firstCard() {
+    document.querySelector("#instructions1").onclick = function () {
+      generateInstructionList(localRooster, "#list1", "#glassType1");
+      document.querySelector('#inst1').innerText = localRooster.instructions;
+    };
+    document.querySelector("#image1").src = localRooster.image;
+    document.querySelector("#name1").innerText = localRooster.name;
+  }
+
+firstCard();
+
       
     }
 
@@ -165,6 +192,21 @@ function storeFilms(filmData) {
 
   /***************************************/
   //JOSEPH add your code to create the film card here: 
+var localFilm = JSON.parse(window.localStorage.getItem("randomFilm"));
+var movieURL = "https://image.tmdb.org/t/p/w500";
+function populateDiscription(locationF, disc) {
+  const dis = document.querySelector(disc);
+  dis.innerText = locationF.overview; 
+}
+
+function firstMCard() {
+  document.querySelector('#overview1').onclick = function () {
+    populateDiscription(localFilm[0], '#discription1');
+  };
+  document.querySelector("#poster1").src = movieURL+localFilm[0].poster;
+  document.querySelector("#title1").innerText = localFilm[0].title;
+}
+firstMCard();
 
 
 }
