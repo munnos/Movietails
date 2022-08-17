@@ -7,7 +7,7 @@
   //api6 Lookup a random cocktail
   
   
-  var cocktailRandomApi = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+ var cocktailRandomApi = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
   
   
  function randomCocktail(qureyString){
@@ -197,6 +197,7 @@ fetch(random).then(function (response) {
     });
   }
 })};
+
 
 
 //Button event code to go here
