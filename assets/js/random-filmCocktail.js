@@ -82,7 +82,7 @@
       var measuresArr =[];
       for (var i = 1; i <= 15; i++) {
         var measure = results.drinks[0]["strMeasure" + i];
-       if(measure !== null & measure !== ""){
+       if(measure !== null & measure !== "" & measure !=="undefined"){
         measuresArr.push(measure);
        }
       }
@@ -91,7 +91,8 @@
         "id": results.drinks[0].idDrink,
         "name": results.drinks[0].strDrink,
         "glass-type": results.drinks[0].strGlass,
-        "instructions": ingredientsArr,
+        "instructions": results.drinks[0].strInstructions,
+        "ingredients": ingredientsArr,
         "measures": measuresArr,
         "image": results.drinks[0].strDrinkThumb
       };

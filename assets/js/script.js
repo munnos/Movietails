@@ -190,7 +190,7 @@ async function getCocktailDetails() {
       var measuresArr =[];
       for (var i = 1; i <= 15; i++) {
         var measure = data.drinks[0]["strMeasure" + i];
-       if(measure !== null & measure !== ""){
+       if(measure !== null & measure !== "" & measure !=="undefined"){
         measuresArr.push(measure);
        }
       }
@@ -201,7 +201,8 @@ async function getCocktailDetails() {
       "id": data.drinks[0].idDrink,
       "name": data.drinks[0].strDrink,
       "glass-type": data.drinks[0].strGlass,
-      "instructions": ingredientsArr,
+      "instructions": data.drinks[0].strInstructions,
+      "ingredients": ingredientsArr,
       "measures": measuresArr,
       "image": data.drinks[0].strDrinkThumb
     };
