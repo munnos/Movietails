@@ -13,14 +13,17 @@
 
 <body>
     <!-- <p style="background-image: url('./assets/Casablanca.jpg');"> -->
-    <div class="title">
-      <h1>FilmTails- Film and Cocktail Generator🍸 🎥</h1>
-    </div>
-  
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#history">History</a>
-    </div>
+        <header>    
+            <div class="title">
+              <h1>FilmTails- Film and Cocktail Generator🍸 🎥</h1>
+            </div>
+          
+              <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#history">History</a>
+              </div>
+        </header>
+
     <style id="backgroundimage">
         body {
          background-image: url("./images/casablanca.jpg");
@@ -37,7 +40,7 @@
          <section>
             <h2></h2> 
              <h3>
-                   Let us suggest a selection of films from your choice of movie genre and pair them with a cocktail
+                   Let us suggest a selection of films from your choice of movie genre paired with a matching class of cocktail
              </h3>
              <p>
                     Select a film genre 
@@ -47,36 +50,40 @@
             <div class="field">
               <select class="ui fluid dropdown" id ="filmgenre">
                 <option value="">Genre</option>
-            <option value="action">action</option>
-            <option value="adventure">adventure</option>
-            <option value="animation">animation</option>
-            <option value="comedy">comedy</option>
-            <option value="crime">crime</option>
-            <option value="documentary">documentary</option>
-            <option value="drama">drama</option>
-            <option value="family">family</option>
-            <option value="fantasy">fantasy</option>
-            <option value="history">history</option>
-            <option value="horror">horror</option>
-            <option value="music">music</option>
-            <option value="mystery">mystery</option>
-            <option value="romance">romance</option>
-            <option value="science fiction">science fiction</option>
-            <option value="thriller">thriller</option>
-            <option value="war">war</option>
-            <option value="western">western</option>
+                <option value="action">action</option>
+                <option value="adventure">adventure</option>
+                <option value="animation">animation</option>
+                <option value="comedy">comedy</option>
+                <option value="crime">crime</option>
+                <option value="documentary">documentary</option>
+                <option value="drama">drama</option>
+                <option value="family">family</option>
+                <option value="fantasy">fantasy</option>
+                <option value="history">history</option>
+                <option value="horror">horror</option>
+                <option value="music">music</option>
+                <option value="mystery">mystery</option>
+                <option value="romance">romance</option>
+                <option value="science fiction">science fiction</option>
+                <option value="thriller">thriller</option>
+                <option value="war">war</option>
+                <option value="western">western</option>
 
                 </select>
-        </div>
-          <button class="ui button" id="suggest">Suggest</button>
-         </main>
-        </div>
+            </div>
+            <h5> Step1: Generate Suggestions</h5>
+            <button class="ui button" id="suggest">Generate Suggestions</button>          
+            <h5> Step2: View Suggestions</h5>
+            <a class=" ui button" href="rFilmCocktail.html" > View Suggestions</a>         
+            
+           </main>
+          </div>
     
         <div class="ui two column grid">
             <div class="row">
          <main id="mainbox" class="aboutthewebsite">
             <h3>
-                Choose a random film paired with a cocktail to match the film genre with cocktails 
+                Choose a random film paired with a cocktail matched to the generated film genre 
             </h3>
             <button class="ui button">Random</button>
         </main>

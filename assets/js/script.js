@@ -237,7 +237,7 @@ async  function displayCocktailDetails() {
   getRandomId();  
   getCocktailDetails();   
 
-}
+} 
 
 
 /*******Film Code ******************************************/
@@ -428,7 +428,7 @@ function storeFilms(filmData) {
   console.log(filmArray);
   //storing cocktails to local storage
   localStorage.setItem("films", JSON.stringify(filmArray));
-
+ 
 }
 
 function callFilm(filmType) {
@@ -479,5 +479,6 @@ $('#suggest').on('click', function(){
   getglassClass(filmType);
   displayCocktailDetails();
   callFilm(filmType);
+  
 
 });

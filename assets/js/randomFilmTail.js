@@ -87,28 +87,21 @@
        }
       }
 
-      var cocktailEntry = {
-        "id": results.drinks[0].idDrink,
-        "name": results.drinks[0].strDrink,
-        "glass-type": results.drinks[0].strGlass,
-        "instructions": results.drinks[0].strInstructions,
-        "ingredients": ingredientsArr,
-        "measures": measuresArr,
-        "image": results.drinks[0].strDrinkThumb
+      var cocktailEntry = {       
+          "id": results.drinks[0].idDrink,
+          "name": results.drinks[0].strDrink,
+          "glass-type": results.drinks[0].strGlass,
+          "instructions": results.drinks[0].strInstructions,
+          "ingredients": ingredientsArr,
+          "measures": measuresArr,
+          "image": results.drinks[0].strDrinkThumb
+        
       };
 
       localStorage.setItem("randomCocktail", JSON.stringify(cocktailEntry));
       
-      console.log(cocktailEntry);
-      for(var i= 0; i < ingredientsArr.length; i++){
-            //console.log(ingredientsArr);
-            //console.log(results.drinks[0]["strIngredient" + i]);
-            //display ingedients
-            var ingred1 = $("<li>").text(measuresArr[i] + ", " +ingredientsArr[i]);
-            $("#display-ingredients").append(ingred1)
-
-
-      }
+      /********************************************** */
+      //JOSEPH ADD YOU CODE FOR THE RANDOM COCKTAIL CARD HERE
       
     }
 
@@ -169,6 +162,9 @@ function storeFilms(filmData) {
   console.log(filmArray);
   //storing cocktails to local storage
   localStorage.setItem("randomFilm", JSON.stringify(filmArray));
+
+  /********************************************** */
+  //JOSEPH ADD YOU CODE FOR THE RANDOM FILM CARD HERE
 
 }
 
