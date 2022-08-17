@@ -470,15 +470,27 @@ fetch(url).then(function (response) {
 //displayCocktailDetails();
 //callFilm();
 
+
+
+var openModal = () => {
+  $('.ui.basic.modal').modal('show')
+  
+}
+
+
 $('#suggest').on('click', function(){
+  openModal();
   console.log("suggest button has been clicked");
   var film = $('#filmgenre').val();
-  alert("You have selected the film - " + film);
+  // $('#modal content').text("You have selected the film - ") + film;
   var filmType = film;
   console.log(filmType);
   getglassClass(filmType);
   displayCocktailDetails();
   callFilm(filmType);
+
+ 
   
 
 });
+
