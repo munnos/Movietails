@@ -16,7 +16,7 @@
   color: white;
 }
 body {
-  background-image: url("./images/casablanca.jpg");
+  background-image: url("./assets/images/casablanca.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
