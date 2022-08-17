@@ -16,10 +16,13 @@
   color: white;
 }
 body {
-  background-image: url("./assets/images/Casablanca.jpg");
+  background-image: url("../images/Casablanca.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 footer{
   margin-top: auto;
