@@ -91,7 +91,8 @@
         "id": results.drinks[0].idDrink,
         "name": results.drinks[0].strDrink,
         "glass-type": results.drinks[0].strGlass,
-        "instructions": ingredientsArr,
+        "instructions": results.drinks[0].strInstructions,
+        "ingredients": ingredientsArr,
         "measures": measuresArr,
         "image": results.drinks[0].strDrinkThumb
       };

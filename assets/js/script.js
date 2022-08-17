@@ -201,7 +201,8 @@ async function getCocktailDetails() {
       "id": data.drinks[0].idDrink,
       "name": data.drinks[0].strDrink,
       "glass-type": data.drinks[0].strGlass,
-      "instructions": ingredientsArr,
+      "instructions": data.drinks[0].strInstructions,
+      "ingredients": ingredientsArr,
       "measures": measuresArr,
       "image": data.drinks[0].strDrinkThumb
     };
