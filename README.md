@@ -145,5 +145,7 @@ I want to see one film and cocktail recommendation only
 ![image](https://user-images.githubusercontent.com/88617634/185420812-62c3b130-546f-45d1-8a31-b3db2d10061d.png)
 
 
+## Deployment 
 
+https://munnos.github.io/Movietails/
 
