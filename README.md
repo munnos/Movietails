@@ -149,3 +149,7 @@ I want to see one film and cocktail recommendation only
 
 https://munnos.github.io/Movietails/
 
+## Link to presentation
+
+https://docs.google.com/presentation/d/1VkNgCqsFCysZCP0z3ZsQRsZYDKHZ42O_/edit?usp=sharing&ouid=111965145354671376542&rtpof=true&sd=true
+
