@@ -18,14 +18,14 @@ Use a CSS framework other than Bootstrap.
 
 ## Contributors
 
-Amaal:
+Amaal: https://github.com/amaalSaid
 Debra: https://github.com/Beanalini
-Joseph: 
+Joseph: https://github.com/JospehBalshaw
 Michael: https://github.com/munnos
 
 
 
-#FilmTails 🎥🍸
+# FilmTails 🎥🍸
 
 ## Motivation
 
