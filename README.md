@@ -16,7 +16,7 @@ Use a CSS framework other than Bootstrap.
 - Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 - Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-##Contributors
+## Contributors
 
 Amaal:
 Debra: https://github.com/Beanalini
@@ -25,9 +25,9 @@ Michael: https://github.com/munnos
 
 
 
-#FilmTails
+#FilmTails 🎥🍸
 
-##Motivation
+## Motivation
 
 I'm sure like us, you've decided to watch a film with friends or family and spent time leafing through Netflix, Amazon Prime and similar sites trying to find a film you all agree upon. 
 
@@ -143,7 +143,6 @@ I want to see one film and cocktail recommendation only
 ![image](https://user-images.githubusercontent.com/88617634/185420523-8762e821-6d79-4b5d-b5af-6a2408ec6065.png)
 ![image](https://user-images.githubusercontent.com/88617634/185420712-1439c1c3-4783-48ca-ac9d-ac196196efcf.png)
 ![image](https://user-images.githubusercontent.com/88617634/185420812-62c3b130-546f-45d1-8a31-b3db2d10061d.png)
-
 
 
 
