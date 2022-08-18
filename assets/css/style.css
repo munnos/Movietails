@@ -1,13 +1,4 @@
-.jumbotron {
-  text-align: center;
-  /*background-color: transparent;*/
-  background-image: linear-gradient(to right top, #313705, #1c562d, #007369, #008eaf, #12a0eb);
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
+
 .title {
   font-family: 'Times New Roman', Times, serif;
   font-size: larger;
@@ -15,13 +6,16 @@
   background-color: rgb(85, 71, 89);;
   color: white;
 }
-.subtitle h2 {
+.subtitle h2, 
+.pairingTitle h2 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 5em;
   text-align: center;
   color: white;
   margin-bottom: 100px;
 }
+
+
 body {
   background-image: url("../images/Casablanca.jpg");
   min-height: 100vh;
