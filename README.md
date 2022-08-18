@@ -18,10 +18,10 @@ Use a CSS framework other than Bootstrap.
 
 ## Contributors
 
-Amaal: https://github.com/amaalSaid
-Debra: https://github.com/Beanalini
-Joseph: https://github.com/JospehBalshaw
-Michael: https://github.com/munnos
+- Amaal: https://github.com/amaalSaid
+- Debra: https://github.com/Beanalini
+- Joseph: https://github.com/JospehBalshaw
+- Michael: https://github.com/munnos
 
 
 
