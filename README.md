@@ -80,7 +80,7 @@ I want to see one film and cocktail recommendation only
 
 ### APIs used
 
-- The Move db  - An API that provides movie information
+- The Movie Database API  - An API that provides movie information
 - The Cocktail db an API that provides cocktail recipes
 
 ### How we linked Film Genre to cocktail classes
@@ -139,10 +139,15 @@ I want to see one film and cocktail recommendation only
 ## Screenshots
 
 ![image](https://user-images.githubusercontent.com/88617634/185394400-1c51fc80-85a5-490b-9c6f-5c678fd8f340.png)
+<br/>
 ![image](https://user-images.githubusercontent.com/88617634/185420286-381532b2-f3e2-4b58-bd56-5b71edaad3f3.png)
+<br/>
 ![image](https://user-images.githubusercontent.com/88617634/185420523-8762e821-6d79-4b5d-b5af-6a2408ec6065.png)
+<br/>
 ![image](https://user-images.githubusercontent.com/88617634/185420712-1439c1c3-4783-48ca-ac9d-ac196196efcf.png)
+<br/>
 ![image](https://user-images.githubusercontent.com/88617634/185420812-62c3b130-546f-45d1-8a31-b3db2d10061d.png)
+
 
 
 ## Deployment 
