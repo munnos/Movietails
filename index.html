@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Tails🍸</title>
+    <title>MovieTails🍸</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
    
@@ -32,51 +32,62 @@
          <section>
             <h2></h2> 
              <h3>
-                   Let us suggest a selection of films from your choice of movie genre paired with a matching class of cocktail
+                Let us make film and  cocktail suggestions based on your choice of film genre!
              </h3>
-             <p>
-                    Select a film genre 
-             </p>
+             <h5> Step 1: Select a film genre  </h5>
          </section> 
          <!-- film genres -->
          <div class="two fields">
             <div class="field">
               <select class="ui fluid dropdown" id ="filmgenre">
                 <option value="">Genre</option>
-                <option value="action">action</option>
-                <option value="adventure">adventure</option>
-                <option value="animation">animation</option>
-                <option value="comedy">comedy</option>
-                <option value="crime">crime</option>
-                <option value="documentary">documentary</option>
-                <option value="drama">drama</option>
-                <option value="family">family</option>
-                <option value="fantasy">fantasy</option>
-                <option value="history">history</option>
-                <option value="horror">horror</option>
-                <option value="music">music</option>
-                <option value="mystery">mystery</option>
-                <option value="romance">romance</option>
-                <option value="science fiction">science fiction</option>
-                <option value="thriller">thriller</option>
-                <option value="war">war</option>
-                <option value="western">western</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="animation">Animation</option>
+                <option value="comedy">Comedy</option>
+                <option value="crime">Crime</option>
+                <option value="documentary">Documentary</option>
+                <option value="drama">Drama</option>
+                <option value="family">Family</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="history">hHistory</option>
+                <option value="horror">Horror</option>
+                <option value="music">Music</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="science fiction">Science Fiction</option>
+                <option value="thriller">Thriller</option>
+                <option value="war">War</option>
+                <option value="western">Western</option>
 
                 </select>
             </div>
-            <h5> Step1: Generate Suggestions</h5>
-            <button class="ui button" id="suggest">Generate Suggestions</button>
+            <h5> Step2: Generate Suggestions</h5>
+            <button class="ui button" id="suggest">Generate</button>
             <div class="ui basic modal">
                 <div class="ui icon header">
                 <i class="web icon"></i>
-                  Film selection
+                <h2>Generating film and Cocktail Suggestions!</h2>
                 </div>
-                <div class="content">
-                    <p id="modal content">Congratulations - you have just taken a major
-                        step in selecting your beverage for the evening! Happy drinking!
-                    </p>
+                <div class="content">                    
+                    
+                    <h4 id="modal content">
+                        Not only will we make film suggestions based on your selected film genre, we  also pair your film selection with defined classes of cocktails and instructions on how to make them.
+                    </h4> <hr />
+                    <h4 id="modal content">
+                        The Family film genre generates non-alcoholic cocktails only.
+                    </h4> <hr />
+                    
                     <br />
+                    <h3 id="modal content">“Louis, I think this is the beginning of a beautiful friendship.”</h3>
+
+
+                   <p id="modal content">-Quote from the character Rick Blaine, played by Humprey Bogart, in the film Casablanca, 1942.</p> 
                   </div>
+                  <br />
+
+                  <h2 id="modal content">🍸 🎥 ENJOY! 🍸 🎥</h2>
+
                   <div class="actions">
                 <div class="ui red basic cancel inverted button">
                     <i class="close icon"></i>
@@ -84,8 +95,8 @@
                 </div>
                       </div>
                   </div>          
-            <h5> Step2: View Suggestions</h5>
-            <a class=" ui button" href="rFilmCocktail.html" > View Suggestions</a>         
+            <h5> Step3: View Suggestions</h5>
+            <a class=" ui button" href="rFilmCocktail.html" >View</a>         
             
            </main>
           </div>
@@ -94,9 +105,9 @@
             <div class="row">
          <main id="mainbox" class="aboutthewebsite">
             <h3>
-                Choose a random film paired with a cocktail matched to the generated film genre 
+                Let us choose you a random film and cocktail! 
             </h3>
-            <a class="ui button" href="randomPairing.html">Random</a>
+            <a class="ui button" href="randomPairing.html">View Random Suggestion</a>
         </main>
         </div>
         
